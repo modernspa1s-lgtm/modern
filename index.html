@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Massage - Your Destination for Relaxation & Wellness</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome -->
+  <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { display: none; }
+    body { font-family: 'Poppins', sans-serif; }
+
+    .gradient-bg { background: linear-gradient(135deg, #f8f6f3 0%, #e8e2db 100%); }
+    .glass-effect { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.9); }
+    .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%); }
+    .turquoise-gradient { background: linear-gradient(135deg, #40e0d0 0%, #48d1cc 100%); }
+    .hover-scale { transition: transform 0.3s ease; }
+    .hover-scale:hover { transform: scale(1.05); }
+
+    .floating { animation: floating 3s ease-in-out infinite; }
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .fade-in { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* إضافات شكلية */
+    .glass-effect { backdrop-filter: blur(8px); background: rgba(255,255,255,0.85); }
+    header.sticky { box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'spa-beige': '#f8f6f3',
+            'spa-gold': '#d4af37',
+            'spa-turquoise': '#40e0d0',
+            'spa-cream': '#faf8f5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="gradient-bg">
+
+<!-- Header Section -->
+</head>
+<body class="bg-gradient-to-br from-[#f8f6f3] to-[#e8e2db]">
+
+  <!-- Header -->
+  <header id="header" class="glass-effect sticky top-0 z-50">
+    <div class="container mx-auto px-4 md:px-6 py-3">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Left: Brand (in RTL it's visually right) -->
+        <div class="flex items-center gap-3">
+          <!-- Logo as image; wrap in anchor to scroll to #home -->
+          <a href="#home" class="flex items-center" aria-label="الذهاب إلى الرئيسية">
+            <img src="logo.png" alt="Modern Massage logo"
+                 class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain rounded-full shadow-sm" />
+          </a>
+
+          <div class="leading-tight">
+            <a href="#home" class="block">
+              <h1 class="text-lg md:text-2xl font-bold text-gray-800">Modern Massage</h1>
+            </a>
+            <p class="text-xs md:text-sm text-gray-600">وجهتك للاسترخاء والعافية</p>
+          </div>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav id="main-nav" class="hidden md:flex items-center gap-6 text-gray-700">
+          <a href="#home" class="hover:text-[#d4af37] transition">الرئيسية</a>
+          <a href="#services" class="hover:text-[#d4af37] transition">الخدمات</a>
+          <a href="#branches" class="hover:text-[#d4af37] transition">الفروع</a>
+          <a href="#gallery" class="hover:text-[#d4af37] transition">المعرض</a>
+          <a href="#contact" class="hover:text-[#d4af37] transition">التواصل</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/966554507673" target="_blank"
+             class="hidden md:inline-flex items-center gap-2 bg-[#40e0d0] text-white px-4 py-2 rounded-full hover:opacity-95 transition">
+            <i class="fab fa-whatsapp"></i> احجز الآن
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-toggle" aria-label="فتح القائمة" class="md:hidden p-2">
+            <i class="fas fa-bars text-2xl text-gray-700"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown nav (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#home" class="block py-2 text-gray-700 hover:text-[#d4af37]">الرئيسية</a>
+        <a href="#services" class="block py-2 text-gray-700 hover:text-[#d4af37]">الخدمات</a>
+        <a href="#branches" class="block py-2 text-gray-700 hover:text-[#d4af37]">الفروع</a>
+        <a href="#gallery" class="block py-2 text-gray-700 hover:text-[#d4af37]">المعرض</a>
+        <a href="#contact" class="block py-2 text-gray-700 hover:text-[#d4af37]">التواصل</a>
+        <a href="https://wa.me/966554507673" target="_blank"
+           class="block text-center mt-2 bg-[#40e0d0] text-white px-4 py-2 rounded-full">احجز الآن</a>
+      </div>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+
+<section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6 pb-16">
+      <div class="pt-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">وجهتك للاسترخاء والصحة</h2>
+        <p class="text-gray-600 mb-6">جلسات مساج متخصصة بأساليب عالمية وبيئة فاخرة هادئة. احجز جلستك الآن واستعيد توازن جسدك وعقلك.</p>
+        <div class="flex gap-3 items-center">
+          <a href="#contact" class="inline-block px-6 py-3 rounded-full text-white font-semibold shadow-lg" style="background:linear-gradient(90deg,#0ea5a0,#06b6d4)">احجز جلستك الآن</a>
+          <a href="https://api.whatsapp.com/send?phone=966554507673&text=السلام عليكم، أود حجز جلسة في مودرن للمساج" class="inline-block px-4 py-3 rounded-full border border-gray-200">مراسلتنا على واتساب</a>
+        </div>
+        <div class="mt-6 flex gap-3 text-sm text-gray-500">
+          <div class="glass px-3 py-2 rounded inline-flex items-center gap-2 shadow-sm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2 7a2 2 0 0 1 2-2h3" stroke="#0ea5a0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>جلسات مدربة محترفة</span>
+          </div>
+          <div class="glass px-3 py-2 rounded inline-flex items-center gap-2 shadow-sm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 20v-6" stroke="#0ea5a0" stroke-width="1.5" stroke-linecap="round"/><path d="M5 12h14" stroke="#0ea5a0" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>بيئة آمنة ونظيفة</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f20d75fa4b-ed4ce6cfeb9529bb2ffe.png" alt="spa" class="w-full h-80 object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Features Overview Section -->
+<section id="features" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center fade-in">
+                <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-award text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">خبرة 10+ سنوات</h3>
+                <p class="text-gray-600">متخصصون معتمدون بخبرة واسعة</p>
+            </div>
+            <div class="text-center fade-in">
+                <div class="w-16 h-16 turquoise-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-leaf text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">منتجات طبيعية</h3>
+                <p class="text-gray-600">زيوت عطرية ومنتجات عضوية فاخرة</p>
+            </div>
+            <div class="text-center fade-in">
+                <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clock text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">مواعيد مرنة</h3>
+                <p class="text-gray-600">مفتوح 7 أيام في الأسبوع</p>
+            </div>
+            <div class="text-center fade-in">
+                <div class="w-16 h-16 turquoise-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">بيئة آمنة</h3>
+                <p class="text-gray-600">أعلى معايير النظافة والسلامة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">خدماتنا المتميزة</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                نقدم مجموعة واسعة من خدمات المساج والعلاج الطبيعي لتجديد طاقتك واستعادة حيويتك
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="relative h-48">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/125222319b-c8412792e2e74db02969.png" alt="thai massage therapy session with professional therapist, traditional techniques, relaxing atmosphere" />
+                    <div class="absolute top-4 right-4 w-12 h-12 gold-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-hands text-white"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">المساج التايلندي</h3>
+                    <p class="text-gray-600 mb-4">مساج تقليدي يجمع بين الضغط والتمدد لتحسين المرونة والدورة الدموية</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-spa-gold">250 ريال</span>
+                        <button class="bg-spa-turquoise text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-90">
+                            احجز الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="relative h-48">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7ca7db8794-a3a99174f2f8fe9623aa.png" alt="swedish massage with essential oils, relaxing spa environment, professional massage table" />
+                    <div class="absolute top-4 right-4 w-12 h-12 gold-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-spa text-white"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">المساج السويدي</h3>
+                    <p class="text-gray-600 mb-4">تقنية كلاسيكية تركز على الاسترخاء العميق وتخفيف التوتر العضلي</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-spa-gold">200 ريال</span>
+                        <button class="bg-spa-turquoise text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-90">
+                            احجز الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="relative h-48">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1b4526d01-23a5a5390bbd8309be16.png" alt="moroccan bath hammam spa treatment, traditional steam room, luxury spa setting" />
+                    <div class="absolute top-4 right-4 w-12 h-12 gold-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-tint text-white"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">الحمام المغربي</h3>
+                    <p class="text-gray-600 mb-4">تجربة تطهير شاملة تنظف البشرة وتتركها ناعمة ومتألقة</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-spa-gold">180 ريال</span>
+                        <button class="bg-spa-turquoise text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-90">
+                            احجز الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="relative h-48">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5f12a886b3-106952b063132d27c444.png" alt="hot stone massage therapy with heated stones, spa candles, relaxing ambiance" />
+                    <div class="absolute top-4 right-4 w-12 h-12 gold-gradient rounded-full flex items-center justify-center">
+                        <i class="fas fa-fire text-white"></i>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">مساج الأحجار الساخنة</h3>
+                    <p class="text-gray-600 mb-4">علاج مهدئ باستخدام الأحجار البركانية الساخنة لتدفئة العضلات</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-spa-gold">300 ريال</span>
+                        <button class="bg-spa-turquoise text-white px-4 py-2 rounded-full text-sm hover:bg-opacity-90">
+                            احجز الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Services -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover-scale fade-in">
+                <div class="w-16 h-16 turquoise-gradient rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-user-md text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">العلاج الطبيعي</h3>
+                <p class="text-gray-600 mb-4">جلسات علاج طبيعي متخصصة لتأهيل الإصابات وتحسين الحركة</p>
+                <span class="text-xl font-bold text-spa-gold">من 150 ريال</span>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover-scale fade-in">
+                <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-seedling text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">العلاج بالزيوت العطرية</h3>
+                <p class="text-gray-600 mb-4">تجربة حسية مميزة تجمع بين الروائح العطرة والمساج العلاجي</p>
+                <span class="text-xl font-bold text-spa-gold">من 220 ريال</span>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover-scale fade-in">
+                <div class="w-16 h-16 turquoise-gradient rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-heart text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">مساج الأزواج</h3>
+                <p class="text-gray-600 mb-4">تجربة رومانسية مشتركة في جناح خاص مصمم للأزواج</p>
+                <span class="text-xl font-bold text-spa-gold">من 400 ريال</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Branches Section -->
+<section id="branches" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">فروعنا في المملكة</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                أربعة فروع استراتيجية في أهم أحياء المملكة لخدمتك بأعلى مستويات الجودة والراحة
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">فرع القدس</h3>
+                            <p class="text-sm text-gray-600">الفرع الرئيسي</p>
+                        </div>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">مفتوح</span>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-location-dot text-spa-turquoise w-5 ml-3"></i>
+                        <span>حي القدس طريق الملك عبدالله</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-clock text-spa-turquoise w-5 ml-3"></i>
+                        <span>السبت - الخميس: 9:00 ص - 11:00 م</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-phone text-spa-turquoise w-5 ml-3"></i>
+                        <span>0554507673</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 rtl:space-x-reverse">
+                    <button class="flex-1 bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        اتصل الآن
+                    </button>
+                    <button class="flex-1 border-2 border-spa-turquoise text-spa-turquoise py-3 rounded-lg hover:bg-spa-turquoise hover:text-white transition-all">
+                        <i class="fas fa-map mr-2"></i>
+                        الخريطة
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">فرع غرناطة</h3>
+                            <p class="text-sm text-gray-600">فرع متميز</p>
+                        </div>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">مفتوح</span>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-location-dot text-spa-turquoise w-5 ml-3"></i>
+                        <span>حي غرناطة شارع خالد بن الوليد</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-clock text-spa-turquoise w-5 ml-3"></i>
+                        <span>السبت - الخميس: 9:00 ص - 11:00 م</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-phone text-spa-turquoise w-5 ml-3"></i>
+                        <span>0540491109</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 rtl:space-x-reverse">
+                    <button class="flex-1 bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        اتصل الآن
+                    </button>
+                    <button class="flex-1 border-2 border-spa-turquoise text-spa-turquoise py-3 rounded-lg hover:bg-spa-turquoise hover:text-white transition-all">
+                        <i class="fas fa-map mr-2"></i>
+                        الخريطة
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">فرع الخليج</h3>
+                            <p class="text-sm text-gray-600">فرع حديث</p>
+                        </div>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">مفتوح</span>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-location-dot text-spa-turquoise w-5 ml-3"></i>
+                        <span>حي الخليج شارع الأمير بندر بن عبدالعزيز</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-clock text-spa-turquoise w-5 ml-3"></i>
+                        <span>السبت - الخميس: 9:00 ص - 11:00 م</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-phone text-spa-turquoise w-5 ml-3"></i>
+                        <span>0505611833</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 rtl:space-x-reverse">
+                    <button class="flex-1 bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        اتصل الآن
+                    </button>
+                    <button class="flex-1 border-2 border-spa-turquoise text-spa-turquoise py-3 rounded-lg hover:bg-spa-turquoise hover:text-white transition-all">
+                        <i class="fas fa-map mr-2"></i>
+                        الخريطة
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-start justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">فرع اليرموك</h3>
+                            <p class="text-sm text-gray-600">فرع واسع</p>
+                        </div>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">مفتوح</span>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-location-dot text-spa-turquoise w-5 ml-3"></i>
+                        <span>حي اليرموك طريق الدمام</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-clock text-spa-turquoise w-5 ml-3"></i>
+                        <span>السبت - الخميس: 9:00 ص - 11:00 م</span>
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <i class="fas fa-phone text-spa-turquoise w-5 ml-3"></i>
+                        <span>0559509080</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-3 rtl:space-x-reverse">
+                    <button class="flex-1 bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        اتصل الآن
+                    </button>
+                    <button class="flex-1 border-2 border-spa-turquoise text-spa-turquoise py-3 rounded-lg hover:bg-spa-turquoise hover:text-white transition-all">
+                        <i class="fas fa-map mr-2"></i>
+                        الخريطة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">آراء عملائنا الكرام</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                اكتشف تجارب عملائنا الرائعة والتقييمات الإيجابية التي حصلنا عليها
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-center mb-6">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">فاطمة الأحمد</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "تجربة رائعة ومميزة! المكان هادئ ومريح والمعاملة احترافية جداً. المساج التايلندي كان مذهل وأشعر بالاسترخاء التام بعد الجلسة."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">منذ أسبوع واحد</div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-center mb-6">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">محمد السالم</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "خدمة ممتازة وجودة عالية. الحمام المغربي كان تجربة مميزة والموظفون محترفون جداً. أنصح الجميع بزيارة هذا المكان الرائع."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">منذ 3 أيام</div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-center mb-6">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">نورا العتيبي</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "أفضل مركز مساج في الرياض! البيئة هادئة ومريحة، والزيوت المستخدمة طبيعية وذات جودة عالية. سأعود بالتأكيد قريباً."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">منذ 5 أيام</div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-center mb-6">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">عبدالله الخالد</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "مساج الأحجار الساخنة كان تجربة لا تُنسى! شعرت بالاسترخاء والراحة الكاملة. المكان نظيف جداً والخدمة احترافية من الدرجة الأولى."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">منذ أسبوعين</div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover-scale fade-in">
+                <div class="flex items-center mb-6">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg" alt="Customer" class="w-16 h-16 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">سارة المطيري</h4>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 leading-relaxed">
+                    "خدمة رائعة ومميزة! استمتعت كثيراً بجلسة المساج السويدي. الأجواء هادئة والموسيقى مريحة. بالتأكيد سأكرر التجربة مرة أخرى."
+                </p>
+                <div class="mt-4 text-sm text-gray-500">منذ 10 أيام</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">معرض الصور</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                اكتشف أجواء الهدوء والرفاهية في مراكزنا من خلال معرض الصور الخاص بنا
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/167bcd9419-6ba82dab58e3397e9e9a.png" alt="luxury spa reception area with modern decor, warm lighting, elegant furniture" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">منطقة الاستقبال</span>
+                </div>
+            </div>
+            
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5e968fc220-5855879b6913f699d36f.png" alt="professional massage room with candles, essential oils, bamboo decor" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">غرفة المساج</span>
+                </div>
+            </div>
+            
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b6d5b1391a-ad59389cd6b082e5908f.png" alt="traditional moroccan hammam bath with steam, luxury tiles, spa atmosphere" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">الحمام المغربي</span>
+                </div>
+            </div>
+            
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/54e496dc7d-7f3584988c9a43c5704f.png" alt="couples massage suite with two beds, romantic lighting, luxury spa setting" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">جناح الأزواج</span>
+                </div>
+            </div>
+            
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/10bc28587b-e23b22ff5ce46a899925.png" alt="relaxation lounge with comfortable seating, herbal tea, spa ambiance" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">صالة الاسترخاء</span>
+                </div>
+            </div>
+            
+            <div class="relative group overflow-hidden rounded-2xl hover-scale fade-in">
+                <img class="w-full h-64 object-cover transition-transform group-hover:scale-110" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f99d6d0869-ba2ccf8fe6ab0b4c6448.png" alt="hot stone therapy setup with heated stones, spa towels, serene environment" />
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">علاج الأحجار الساخنة</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="gold-gradient text-white px-8 py-4 rounded-full text-lg font-semibold hover-scale shadow-lg">
+                <i class="fas fa-images mr-2"></i>
+                عرض المزيد من الصور
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section id="packages" class="py-20 gradient-bg">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">باقاتنا المميزة</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                اختر من باقاتنا المتنوعة التي تجمع بين أفضل خدماتنا بأسعار مميزة
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="gold-gradient p-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-2">الباقة الذهبية</h3>
+                    <p class="text-white/90">للمبتدئين</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-gray-800">450</span>
+                        <span class="text-xl text-gray-600"> ريال</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>مساج سويدي (60 دقيقة)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>حمام مغربي تقليدي</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>استرخاء بالزيوت العطرية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>مشروب عشبي مجاني</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        احجز الآن
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in transform scale-105">
+                <div class="turquoise-gradient p-6 text-center relative">
+                    <div class="absolute top-0 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-b-lg text-sm font-semibold">
+                        الأكثر طلباً
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">الباقة البلاتينية</h3>
+                    <p class="text-white/90">للمحترفين</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-gray-800">750</span>
+                        <span class="text-xl text-gray-600"> ريال</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>مساج الأحجار الساخنة (90 دقيقة)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>حمام مغربي ملكي</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>علاج طبيعي متقدم</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>جلسة استرخاء في الصالة الخاصة</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>وجبة خفيفة صحية</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        احجز الآن
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale fade-in">
+                <div class="gold-gradient p-6 text-center">
+                    <h3 class="text-2xl font-bold text-white mb-2">باقة الأزواج</h3>
+                    <p class="text-white/90">تجربة رومانسية</p>
+                </div>
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-gray-800">1200</span>
+                        <span class="text-xl text-gray-600"> ريال</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>مساج أزواج (120 دقيقة)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>جناح خاص للأزواج</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>شموع عطرية رومانسية</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-spa-turquoise mr-3"></i>
+                            <span>عشاء خفيف للاثنين</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-spa-turquoise text-white py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        احجز الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">تواصل معنا</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                نحن هنا لخدمتك على مدار الساعة. تواصل معنا واحجز موعدك الآن
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="fade-in">
+                <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">احجز موعدك</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">الاسم الأول</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent" placeholder="أدخل اسمك الأول">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">الاسم الأخير</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent" placeholder="أدخل اسمك الأخير">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 text-sm font-medium mb-2">رقم الهاتف</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent" placeholder="+966 5X XXX XXXX">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 text-sm font-medium mb-2">البريد الإلكتروني</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent" placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">الفرع المفضل</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent">
+                                    <option>فرع القدس</option>
+                                    <option>فرع غرناطة</option>
+                                    <option>فرع الخليج</option>
+                                    <option>فرع اليرموك</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">نوع الخدمة</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent">
+                                    <option>المساج التايلندي</option>
+                                    <option>المساج السويدي</option>
+                                    <option>الحمام المغربي</option>
+                                    <option>مساج الأحجار الساخنة</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">التاريخ المفضل</label>
+                                <input type="date" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">الوقت المفضل</label>
+                                <select class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent">
+                                    <option>9:00 ص - 11:00 ص</option>
+                                    <option>11:00 ص - 1:00 م</option>
+                                    <option>1:00 م - 3:00 م</option>
+                                    <option>3:00 م - 5:00 م</option>
+                                    <option>5:00 م - 7:00 م</option>
+                                    <option>7:00 م - 9:00 م</option>
+                                    <option>9:00 م - 11:00 م</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 text-sm font-medium mb-2">ملاحظات إضافية</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-spa-turquoise focus:border-transparent" placeholder="أي طلبات خاصة أو ملاحظات..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gold-gradient text-white py-4 rounded-lg text-lg font-semibold hover-scale shadow-lg">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            تأكيد الحجز
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="fade-in">
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">معلومات التواصل</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 turquoise-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">خدمة العملاء</h4>
+                                    <p class="text-gray-600">920000000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">واتساب</h4>
+                                    <p class="text-gray-600">+966 50 000 0000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 turquoise-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">البريد الإلكتروني</h4>
+                                    <p class="text-gray-600">info@modernmassage.sa</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">ساعات العمل</h4>
+                                    <p class="text-gray-600">السبت - الخميس: 9:00 ص - 11:00 م</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-spa-cream to-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">تواصل سريع</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="bg-green-500 text-white py-4 rounded-lg hover:bg-green-600 transition-all hover-scale">
+                                <i class="fab fa-whatsapp text-2xl mb-2"></i>
+                                <div class="text-sm">واتساب</div>
+                            </button>
+                            
+                            <button class="bg-blue-500 text-white py-4 rounded-lg hover:bg-blue-600 transition-all hover-scale">
+                                <i class="fas fa-phone text-2xl mb-2"></i>
+                                <div class="text-sm">اتصال مباشر</div>
+                            </button>
+                            
+                            <button class="bg-red-500 text-white py-4 rounded-lg hover:bg-red-600 transition-all hover-scale">
+                                <i class="fas fa-envelope text-2xl mb-2"></i>
+                                <div class="text-sm">إيميل</div>
+                            </button>
+                            
+                            <button class="bg-purple-500 text-white py-4 rounded-lg hover:bg-purple-600 transition-all hover-scale">
+                                <i class="fas fa-map text-2xl mb-2"></i>
+                                <div class="text-sm">الموقع</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="fade-in">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-spa text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Modern Massage</h3>
+                        <p class="text-gray-400">Your Wellness Destination</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    وجهتك المثالية للاسترخاء والعافية في المملكة العربية السعودية. نقدم أفضل خدمات المساج والعلاج الطبيعي بأيدي متخصصة.
+                </p>
+                <div class="flex space-x-4 rtl:space-x-reverse">
+                    <span class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-spa-turquoise transition-colors cursor-pointer">
+                        <i class="fab fa-facebook-f"></i>
+                    </span>
+                    <span class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-spa-turquoise transition-colors cursor-pointer">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                    <span class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-spa-turquoise transition-colors cursor-pointer">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                    <span class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-spa-turquoise transition-colors cursor-pointer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="fade-in">
+                <h4 class="text-xl font-semibold mb-6">روابط سريعة</h4>
+                <ul class="space-y-3">
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">الرئيسية</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">خدماتنا</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">فروعنا</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">الباقات</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">المعرض</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">تواصل معنا</span></li>
+                </ul>
+            </div>
+            
+            <div class="fade-in">
+                <h4 class="text-xl font-semibold mb-6">خدماتنا</h4>
+                <ul class="space-y-3">
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">المساج التايلندي</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">المساج السويدي</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">الحمام المغربي</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">مساج الأحجار الساخنة</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">العلاج الطبيعي</span></li>
+                    <li><span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">مساج الأزواج</span></li>
+                </ul>
+            </div>
+            
+            <div class="fade-in">
+                <h4 class="text-xl font-semibold mb-6">معلومات التواصل</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-spa-turquoise w-5 ml-3"></i>
+                        <span class="text-gray-400">920000000</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-whatsapp text-spa-turquoise w-5 ml-3"></i>
+                        <span class="text-gray-400">+966 50 000 0000</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-spa-turquoise w-5 ml-3"></i>
+                        <span class="text-gray-400">info@modernmassage.sa</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-clock text-spa-turquoise w-5 ml-3 mt-1"></i>
+                        <div class="text-gray-400">
+                            <div>السبت - الخميس</div>
+                            <div>9:00 ص - 11:00 م</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-right">
+                    © 2025 Modern Massage. جميع الحقوق محفوظة.
+                </p>
+                <div class="flex space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
+                    <span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">سياسة الخصوصية</span>
+                    <span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">الشروط والأحكام</span>
+                    <span class="text-gray-400 hover:text-spa-turquoise transition-colors cursor-pointer">اتفاقية الاستخدام</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<div class="fixed bottom-6 right-6 z-50">
+    <button class="w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover-scale floating">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+</div>
+
+<script>
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add fade-in animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    observer.observe(el);
+});
+
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector('button.md\\:hidden');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-40';
+mobileMenu.innerHTML = `
+    <nav class="px-6 py-4 space-y-4">
+        <span class="block text-gray-700 hover:text-spa-gold transition-colors cursor-pointer">الرئيسية</span>
+        <span class="block text-gray-700 hover:text-spa-gold transition-colors cursor-pointer">الخدمات</span>
+        <span class="block text-gray-700 hover:text-spa-gold transition-colors cursor-pointer">الفروع</span>
+        <span class="block text-gray-700 hover:text-spa-gold transition-colors cursor-pointer">المعرض</span>
+        <span class="block text-gray-700 hover:text-spa-gold transition-colors cursor-pointer">التواصل</span>
+    </nav>
+`;
+
+let mobileMenuOpen = false;
+mobileMenuButton.addEventListener('click', () => {
+    if (!mobileMenuOpen) {
+        document.getElementById('header').appendChild(mobileMenu);
+        mobileMenuOpen = true;
+    } else {
+        mobileMenu.remove();
+        mobileMenuOpen = false;
+    }
+});
+
+// Phone number click handlers
+document.querySelectorAll('button:contains("اتصل الآن")').forEach(button => {
+    button.addEventListener('click', function() {
+        const phoneNumber = this.closest('.bg-gradient-to-br').querySelector('.fas.fa-phone').nextElementSibling.textContent;
+        window.open(`tel:${phoneNumber}`);
+    });
+});
+
+// WhatsApp button functionality
+document.querySelectorAll('button:contains("واتساب"), .fixed button').forEach(button => {
+    button.addEventListener('click', function() {
+        window.open('https://wa.me/966500000000?text=مرحباً، أود حجز موعد في Modern Massage');
+    });
+});
+</script>
+
+</body>
+</html>
